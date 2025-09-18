@@ -1,0 +1,30 @@
+// Pour la suite, quand vous ferez des
+odifications à vos fichiers (HTML, CSS ou JS), 
+vous pourrez utiliser ces commandes pour les envoyer sur GitHub :
+git add .
+git commit -m "Description de vos changements"
+git push // 
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Dépendances
+/node_modules/
+
+# Fichiers de build
+/dist/
+/build/
+
+# Fichiers d'environnement
+.env
+.env.local
+
+# Fichiers de log
+*.log
+
+# Fichiers IDE
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
