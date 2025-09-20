@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroClarté - Le bien-être avant tout.</title>
+    <title>NeuroClarté - Le bien-être avant tout</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="app-header-sidebar">
                 <h1>NeuroClarté</h1>
-                <h2>Le bien-être avant tout.</h2>
+                <h2>Le bien-être avant tout</h2>
                 <div class="sidebar-toggle" id="sidebar-toggle">
                     <img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-right.png" alt="Toggle Sidebar">
                 </div>
@@ -31,12 +31,16 @@
                     <span class="nav-text">Journal</span>
                 </a>
                 <a href="#" class="nav-item" data-section="exercice">
-                    <i class="fas fa-brain icon"></i>
+                    <i class="fas fa-seedling icon"></i>
                     <span class="nav-text">Exercice</span>
                 </a>
                 <a href="#" class="nav-item" data-section="capsules">
                     <i class="fas fa-lightbulb icon"></i>
                     <span class="nav-text">Capsules</span>
+                </a>
+                 <a href="#" class="nav-item" data-section="neuroscience">
+                    <i class="fas fa-brain icon"></i>
+                    <span class="nav-text">Neuroscience</span>
                 </a>
                 <a href="#" class="nav-item" data-section="ressources">
                     <i class="fas fa-hands-helping icon"></i>
@@ -44,13 +48,14 @@
                 </a>
             </nav>
         </aside>
+
         <main class="main-content">
             <section id="home" class="content-section-page active">
                 <div class="ethics-section">
                     <h2>Bienvenue à NeuroClarté</h2>
-                    <p class="ethics-subtitle">Une plateforme conçue pour vous accompagner dans votre chemin vers le bien-être.</p>
-                    <p class="ethics-subtitle warning">⚠️ En cas d'urgence, contactez une ressource professionnelle. 
-                        Cette application est un outil d'accompagnement, non un substitut à l'aide psychologique spécialisée.</p>
+                    <p class="ethics-subtitle"> Une plateforme conçue pour vous accompagner dans votre chemin vers le bien-être.</p>
+                    <p class="ethics-subtitle warning">Cette application est un outil d'accompagnement, non un substitut à l'aide psychologique spécialisée.</p>
+                    <p class="ethics-subtitle warning">⚠️ En cas d'urgence, contactez une ressource professionnelle.</p>
                 </div>
                 <div class="content-section">
                     <h2>Commencez votre parcours de bien-être</h2>
@@ -67,6 +72,10 @@
                             <h3>Capsules d'apprentissage</h3>
                             <p>Découvrez des notions clés de psychologie et de bien-être.</p>
                         </a>
+                        <a href="#" class="content-card" data-section="neuroscience">
+                            <h3>Informations de neuroscience</h3>
+                            <p>Pour une compréhension plus globale, découvrez des informations essentiels en neuroscience.</p>
+                        </a>
                         <a href="#" class="content-card" data-section="ressources">
                             <h3>Ressources Utiles</h3>
                             <p>Découvrez des ressources pour votre santé mentale.</p>
@@ -74,20 +83,28 @@
                     </div>
                 </div>
             </section>
-            
+
             <section id="journal" class="content-section-page" style="display: none;">
                 </section>
             
             <section id="exercice" class="content-section-page" style="display: none;">
                 </section>
             
-            <section id="capsules" class="content-section-page" style="display: none;">
+            <section id="capsules" class="content-section-page">
                 </section>
             
             <section id="ressources" class="content-section-page" style="display: none;">
                 </section>
+
+            <section id="neuroscience" class="content-section-page" style="display: none;">
+            </section>
+
+            <div class="disclaimer-note">
+            <p>Ce site respecte votre vie privée. Toutes les données que vous entrez (comme dans le journal ou les exercices) sont sauvegardées localement dans votre navigateur et ne sont jamais transmises à un serveur. Conformément aux lois sur la protection des données, vous conservez le contrôle total de vos informations.</p>
+
         </main>
     </div>
     <script src="script.js"></script>
+</div>
 </body>
 </html>

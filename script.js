@@ -1,6 +1,74 @@
 document.addEventListener('DOMContentLoaded', function() {
+const neuroscienceContent = `
+<div class="content-section-text neuroscience-container">
+        <div class="page-quote">
+            <p class="quote-text">"Les neurones qui s'activent ensemble se connectent ensemble."</p>
+            <p class="quote-author">— Donald O. Hebb</p>
+        </div>    
+    <header class="headerneuroscience">
+        <h1>Neurosciences</h1>
+        <p>L'étude fascinante du cerveau</p>
+    </header>
+
+    <main class="main-content">
+        <section id="introduction" class="content-section active">
+            <h2>Qu'est-ce que les neurosciences ?</h2>
+            <div class="info-box1">
+            <p>Les neurosciences sont l'ensemble des sciences qui étudient le système nerveux, son anatomie et son fonctionnement. Elles s'intéressent aux mécanismes du cerveau pour comprendre les comportements, les émotions et les maladies neurologiques.</p>
+        </section>
+
+        <section id="neurones" class="content-section">
+            <h2>Le rôle des neurones</h2>
+            <div class="info-box2">
+            <p>Les neurones sont les cellules fondamentales du système nerveux. Ils transmettent l'information sous forme de signaux électriques et chimiques. On estime qu'il y a environ 86 milliards de neurones dans un cerveau humain.</p>
+            <div class="image-container">
+                </div>
+        </section>
+
+        <section id="plasticite" class="content-section">
+            <h2>La plasticité cérébrale</h2>
+            <div class="info-box3">
+            <p>La plasticité cérébrale est la capacité du cerveau à se réorganiser et à former de nouvelles connexions neuronales tout au long de la vie. C'est elle qui permet l'apprentissage, la mémoire et la récupération.</p>
+        </section>
+
+        <section id="depression" class="content-section">
+            <h2>La neuroscience de la dépression</h2>
+            <div class="info-box4">
+            <p>Les neurosciences ont révélé que la dépression n'est pas qu'un état d'esprit, mais qu'elle est associée à des changements dans la <strong>chimie</strong> du cerveau. Des déséquilibres dans les neurotransmetteurs comme la sérotonine, la noradrénaline et la dopamine sont souvent observés. Par exemple, le stress chronique peut réduire le volume de l'hippocampe et affecter la neurogénèse, ce qui contribue aux symptômes dépressifs.</p>
+        </section>
+
+        <section id="depression" class="content-section">
+            <h2>Le cerveau et le bien-être</h2>
+            <div class="info-box5">
+            <p>Les neurotransmetteurs sont les messagers chimiques du cerveau. Ils sont essentiels pour notre humeur, notre motivation et notre sentiment de plaisir.</p>
+            <p>La <strong>dopamine</strong> est souvent liée au plaisir et à la motivation. Des niveaux bas peuvent entraîner un manque d'énergie et d'intérêt, des symptômes fréquents dans la dépression. S'engager dans des activités que vous aimez (même si l'envie est faible au début) peut aider à stimuler sa production, un principe clé de l'activation comportementale en thérapie.</p>
+            <p>La <strong>sérotonine</strong> joue un rôle crucial dans la régulation de l'humeur, du sommeil et de l'appétit. Un déséquilibre est fréquemment observé chez les personnes souffrant de dépression. L'exposition à la lumière du soleil et une alimentation saine peuvent influencer son niveau.
+        </section>
+
+        <section id="depression" class="content-section">
+            <h2>Méditation : Un entraînement pour le cerveau</h2>
+            <div class="info-box6">
+            <p>La méditation de pleine conscience, ou mindfulness, n'est pas seulement une technique de relaxation, elle est une forme de <strong>neuroplasticité dirigée</strong>. En pratiquant la méditation, vous renforcez les connexions dans les zones cérébrales liées à l'attention, à la régulation des émotions et à la prise de perspective (le cortex préfrontal). Cette pratique peut aider à réduire l'activité de l'amygdale, la zone du cerveau responsable de la peur et de l'anxiété, rendant la réponse au stress moins intense. C'est une manière proactive de remodeler les circuits neuronaux pour un meilleur bien-être mental.</p>        </section>
+
+        <section id="depression" class="content-section">
+            <h2>Le rôle du sommeil dans la santé mentale</h2>
+            <div class="info-box7">
+            <p>Dormir n'est pas un luxe, c'est une nécessité biologique pour le cerveau. Pendant le sommeil, votre cerveau ne se repose pas, il s'active pour consolider les apprentissages et les souvenirs, et pour "nettoyer" les sous-produits toxiques accumulés pendant la journée. La phase de sommeil paradoxal (REM), en particulier, est essentielle pour la régulation des émotions. Un manque chronique de sommeil peut affaiblir les fonctions exécutives, augmenter les niveaux de stress et rendre le cerveau plus vulnérable aux symptômes de dépression et d'anxiété.</p>
+        </section>
+
+        <section id="depression" class="content-section">
+            <h2>Pourquoi les liens sociaux sont vitaux pour votre cerveau</h2>
+            <div class="info-box8">
+            <p>Les humains sont des êtres sociaux, et nos cerveaux en sont la preuve. Les interactions sociales positives déclenchent la libération d'ocytocine, souvent appelée "l'hormone de l'amour", et de dopamine, renforçant ainsi les sentiments de plaisir et de connexion. L'isolement social, en revanche, peut être perçu par le cerveau comme une menace, activant la réponse au stress et augmentant les risques de dépression. Cultiver des relations saines et significatives n'est donc pas seulement un choix de vie, c'est une stratégie de bien-être qui renforce votre résilience neuronale.</p>
+        </section>
+    </main>
+`;
     const journalHTML = `
         <div class="content-section-text journal-container">
+        <div class="page-quote">
+            <p class="quote-text">"Tant que vous n'aurez pas rendu l'inconscient conscient, il dirigera votre vie et vous appellerez cela le destin"</p>
+            <p class="quote-author">— Carl Gustav Jung</p>
+        </div>
             <h2>Journal de l'humeur et des pensées</h2>
             <div class="journal-controls">
                 <button id="prev-month">&lt;</button>
@@ -32,6 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     const exerciceHTML = `
         <div class="app-container-inner">
+        <div class="page-quote">
+            <p class="quote-text">"L'acceptation n'est pas une résignation passive, mais le fondement même du changement véritable."</p>
+            <p class="quote-author">— NeuroClarté</p>
+        </div>
             <div class="progress-bar">
                 <div class="progress-bar-fill" id="progressBar"></div>
             </div>
@@ -129,33 +201,35 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     `;
     const capsulesHTML = `
-        <div class="content-section-text">
-            <h2>Capsules d'apprentissage</h2>
-            <p>Apprenez des concepts clés en psychologie et des outils pour votre bien-être. Cliquez sur une carte pour découvrir son contenu!</p>
-            <div class="flashcard-grid">
-                </div>
+    <h2 class="section-title">Capsules</h2>
+    <div class="page-quote">
+        <p class="quote-text">"Ce qui est difficile aujourd'hui sera simple demain, et ce qui est simple demain deviendra une habitude la semaine prochaine."</p>
+        <p class="quote-author">— Bob Ross</p>
+    </div>
+    <div class="content-section-text">
+        <p>Apprenez des concepts clés en psychologie et des outils pour votre bien-être. Cliquez sur une carte pour découvrir son contenu!</p>
+        <div class="flashcard-grid">
+    </div>
+    </div>
+`;
+const ressourcesHTML = `
+    <div class="content-section-text">
+        <h2>Ressources pour la santé mentale</h2>
+        <p>Voici quelques ressources pour vous aider en cas de besoin. N'hésitez pas à les contacter pour obtenir du soutien professionnel.</p>
+        <div class="content-grid">
+            <a href="tel:1-833-456-4566" class="content-card">
+                <h3>Service d'aide immédiate</h3>
+                <p>tel: <strong>1-833-456-4566</strong></p>
+                <p>24 heures sur 24, 7 jours sur 7</p>
+                <p>En cas de détresse psychologique.</p>
+            </a>
+            <a href="https://www.crisisservicescanada.ca/fr/" target="_blank" class="content-card">
+                <h3>Service d'aide par téléphone et par texto</h3>
+                <p>Appelez ou textez au <strong>988</strong> pour communiquer avec la ligne d'aide en cas de crise suicidaire. https://www.crisisservicescanada.ca/fr/</p>
+            </a>
         </div>
-    `;
-    const ressourcesHTML = `
-        <div class="content-section-text">
-            <h2>Ressources pour la santé mentale</h2>
-            <p>Voici quelques ressources pour vous aider en cas de besoin. N'hésitez pas à les contacter pour obtenir du soutien professionnel.</p>
-            <div class="content-grid">
-                <a href="tel:1-833-456-4566" class="content-card">
-                    <h3>Service d'aide immédiate</h3>
-                    <p>En cas de crise ou de détresse psychologique. 24h/24, 7 jours sur 7.</p>
-                </a>
-                <a href="https://www.crisisservicescanada.ca/fr/" target="_blank" class="content-card">
-                    <h3>Ressources en ligne</h3>
-                    <p>Trouvez des lignes d'écoute et des services de soutien par texto.</p>
-                </a>
-                <a href="https://www.quebec.ca/sante/trouver-une-ressource/consulter-un-professionnel-de-la-sante/soutien-psychologique-et-psychotherapie" target="_blank" class="content-card">
-                    <h3>Trouver un psychologue</h3>
-                    <p>Informations du gouvernement du Québec pour trouver de l'aide professionnelle.</p>
-                </a>
-            </div>
-        </div>
-    `;
+    </div>
+`;
     const flashcardData = [
         {
            front: "La thérapie cognitivo-comportementale (TCC)",
@@ -320,6 +394,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('exercice').style.display = 'none';
         document.getElementById('ressources').style.display = 'none';
         document.getElementById('capsules').style.display = 'none';
+        document.getElementById('neuroscience').style.display = 'none';
+        
         
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
@@ -333,13 +409,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Chargement de l\'exercice');
                 targetSection.innerHTML = exerciceHTML;
                 initExerciceHandlers();
-            } else if (sectionId === 'capsules' && targetSection.innerHTML.length < 100) {
+            } else if (sectionId === 'capsules' && !targetSection.querySelector('.flashcard-grid')) {
                 console.log('Chargement des capsules');
                 targetSection.innerHTML = capsulesHTML;
                 initCapsulesHandlers();
             } else if (sectionId === 'ressources' && targetSection.innerHTML.length < 100) {
                 console.log('Chargement des ressources');
                 targetSection.innerHTML = ressourcesHTML;
+                initCapsulesHandlers();
+            }
+            else if (sectionId === 'neuroscience' && targetSection.innerHTML.length < 100) {
+                console.log('Chargement des neurosciences');
+                targetSection.innerHTML = neuroscienceContent;
             }
         }
     }
@@ -362,7 +443,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         document.addEventListener('click', (e) => {
             if (e.target.closest('.content-card')) {
-                e.preventDefault();
                 const card = e.target.closest('.content-card');
                 const sectionId = card.dataset.section;
                 if (sectionId) {
@@ -489,7 +569,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showJournalDisplay(selectedDate);
                 renderCalendar();
             } else {
-                messageDisplay.textContent = 'Veuillez sélectionner une couleur et écrire une note.';
+                messageDisplay.textContent = 'Veuillez sélectionner une couleur et écrire vos commentaires/observations.';
             }
         });
         

@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #5e816a;
-    --secondary-color: #ccdfd1;
+    --primary-color: #282927 ;
+    --secondary-color: #e0d1dd;
     --text-color: #333;
-    --bg-color: #bccbc2;
-    --sidebar-bg: #4b5d52;
-    --sidebar-hover-bg: #6a7d70;
-    --card-bg: #eaf7ee;
-    --card-border: #e0e0e0;
+    --bg-color: #beacbc;
+    --sidebar-bg: #e2e7dd;
+    --sidebar-hover-bg: #beacbc;
+    --card-bg: #beacbc;
+    --card-border: #cec5c5;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     
     --red-mood: #b63434;
@@ -29,7 +29,7 @@ body {
 .sidebar {
     width: 250px;
     background-color: var(--sidebar-bg);
-    color: #fff;
+    color: #747074;
     padding: 20px;
     box-shadow: var(--shadow);
     display: flex;
@@ -65,7 +65,7 @@ body {
     padding: 12px 15px;
     border-radius: 8px;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     transition: background-color 0.2s ease, transform 0.2s ease;
     margin-bottom: 10px;
 }
@@ -74,7 +74,7 @@ body {
     transform: translateX(5px);
 }
 .nav-item.active {
-    background-color: var(--primary-color);
+    background-color: #beacbc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .nav-item .icon {
@@ -106,7 +106,7 @@ body {
     font-weight: 600;
 }
 .ethics-section .warning {
-    color: #c0912b;
+    color: #5b430f;
     font-weight: 500;
     font-size: 0.9em;
 }
@@ -120,7 +120,7 @@ body {
     margin-top: 20px;
 }
 .content-card {
-    background-color: var(--card-bg);
+    background-color: #d3dacd;
     border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 25px;
@@ -472,7 +472,7 @@ textarea {
 #close-modal-btn:hover {
     background-color: #616a6a;
 }
-/* NOUVEAU : Styles pour les flashcards */
+/* -------------------Styles pour les flashcards------------------- */
 .flashcard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -485,6 +485,7 @@ textarea {
     height: 250px;
     perspective: 1000px;
     cursor: pointer;
+    margin: 10px -25px;
 }
 .flashcard {
     position: relative;
@@ -518,7 +519,7 @@ textarea {
     font-weight: 600;
 }
 .flashcard-back {
-    background-color: #F5F5DC;
+    background-color: #e2e7dd;
     color: #4A4A4A;
     transform: rotateY(180deg);
     text-align: left;
@@ -528,18 +529,18 @@ textarea {
     margin-bottom: 10px;
 }
 /* ---------------------- Styles pour les Ressources ---------------------- */
-/* Styles pour la nouvelle étape de l'exercice */
+
 #step-2 ul {
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
-    text-align: left;
+    text-align: center;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 #step-2 ul li {
-    background-color: #f5f5f5;
+    background-color: #611010;
     border-left: 4px solid var(--primary-color);
     padding: 10px 15px;
     margin-bottom: 10px;
@@ -549,6 +550,89 @@ textarea {
 #step-2 ul li strong {
     color: var(--primary-color);
     font-weight: bold;
+
+/* ---------------------- Styles pour les quotes ---------------------- */
+
+}
+.page-quote {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.page-quote {
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #333;
+}
+
+.quote-text {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #444;
+}
+
+.quote-author {
+    font-size: 1em;
+    font-weight: bold;
+    color: #666;
+    margin-top: 10px;
+}
+
+#capsules .section-title {
+    display: none;
 }
 
 
+/* --------------Section Neuroscience--------------- */
+
+#neuroscience .section-title {
+    display: none;
+}
+
+.headerneuroscience {
+    background: #e2e7dd;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.headerneuroscience h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color : #3f3f3f
+}
+
+.info-box1, .info-box2, .info-box3, .info-box4, .info-box5, .info-box6, .info-box7, .info-box8 {
+    background-color: #e2e7dd;
+    border-left: 5px solid #beacbc;
+    padding: 0.75em; /* L'espace entre le texte et les bords */
+    border-radius: 12px; /* Des coins légèrement arrondis */
+    margin: 2em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section-text .info-box1, .info-box2, .info-box3, .info-box4, .info-box5, .info-box6, .info-box7, .info-box8 p { /* Le texte dans les box */
+    margin: 0;
+    color: #000000; 
+    font-size: 1.2em; /* Rend le texte 20% plus gros */
+    font-weight: 400; /* Met le texte en gras */
+    line-height: 1.6; /* Améliore la lisibilité avec un interligne */
+}
+
+/* ------------------------Disclaimer de l'utilisation des données------------------------ */
+
+.disclaimer-note {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 2em;
+    margin-top: 3em;
+
+    font-size: 0.8em;
+    color: #888;
+    text-align: center;
+}
