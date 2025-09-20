@@ -528,7 +528,7 @@ textarea {
     color: #4E6C50;
     margin-bottom: 10px;
 }
-/* ---------------------- Styles pour les Ressources ---------------------- */
+/* ---------------------- Styles pour l'étape 2 de l'exercice' ---------------------- */
 
 #step-2 ul {
     list-style-type: none;
@@ -540,7 +540,7 @@ textarea {
     margin-right: auto;
 }
 #step-2 ul li {
-    background-color: #611010;
+    background-color: #e2e7dd;
     border-left: 4px solid var(--primary-color);
     padding: 10px 15px;
     margin-bottom: 10px;
